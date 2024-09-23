@@ -1,0 +1,57 @@
+body {
+    color: #444;
+}
+
+/* 12 90/30 1410 */
+.inner {
+    max-width: 1410px;
+    margin: 0 auto;
+}
+
+.btn {
+    position: relative;
+    display: inline-block;
+    border: 2px solid #09847f;
+    color: #09847f;
+    padding: 18px 32px;
+    border-radius: 28px;
+    overflow: hidden;
+}
+
+.btn:hover {
+    color: #fff;
+}
+
+.btn::after {
+    content: "";
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: url(../images/arrow-up-right.svg) no-repeat center center/16px;
+
+    margin-left: 16px;
+}
+
+.btn:hover::after {
+    background: url(../images/arrow-up-right-w.svg) no-repeat center center/16px;
+}
+
+.btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 0;
+    background: #09847f;
+
+    z-index: -1;
+
+    transition: 0.4s;
+}
+
+.btn:hover::before {
+    top: auto;
+    bottom: 0;
+    height: 100%;
+}

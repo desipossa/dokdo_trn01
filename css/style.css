@@ -1,0 +1,161 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+}
+
+.header.on {
+    background: #fff;
+}
+
+.header.on .logo_txt {
+    filter: invert();
+}
+
+.header .hd_wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    height: 120px;
+
+    transition: 0.5s;
+
+}
+
+.header.on .hd_wrap {
+    height: 80px;
+}
+
+.header h1 {}
+
+.header h1 a {
+    display: flex;
+}
+
+.header h1 a img {
+    height: 40px;
+}
+
+.header .gnb {}
+
+.header .gnb>ul {
+    display: flex;
+    gap: 40px;
+}
+
+.header .gnb>ul>li>a {
+    color: #fff;
+    font-size: 17px;
+    font-weight: 500;
+}
+
+.header.on .gnb>ul>li>a {
+    color: #444;
+}
+
+.header .utils ul {
+    display: flex;
+    gap: 24px;
+}
+
+.header .utils ul li~li {
+    position: relative;
+}
+
+.header .utils ul li~li::before {
+    content: "";
+    position: absolute;
+
+    top: 50%;
+    left: -12px;
+
+    transform: translate(-50%, -50%);
+
+
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: #fff;
+
+}
+
+.header.on .utils ul li~li::before {
+    background: #444;
+}
+
+.header .utils a {
+    color: #fff;
+    font-size: 14px;
+}
+
+.header.on .utils a {
+    color: #444;
+}
+
+
+.main_visual {}
+
+.main_visual .main_visual_slide {
+    border-radius: 0 0 200px 0;
+}
+
+.main_visual .main_visual_slide .itm {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.main_visual .main_visual_slide .itm .bg {
+    position: absolute;
+    inset: 0 0 0 0;
+}
+
+.main_visual .main_visual_slide .itm01 .bg {
+    background: url(../images/img_visual01.jpg) no-repeat center center/cover;
+}
+
+.main_visual .main_visual_slide .itm02 .bg {
+    background: url(../images/img_visual02.jpg) no-repeat center center/cover;
+}
+
+.main_visual .main_visual_slide .itm .slg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    max-width: 500px;
+    width: 100%;
+
+    text-align: center;
+}
+
+.main_visual .main_visual_slide .itm .slg figure {
+    margin-bottom: 40px;
+}
+
+.main_visual .main_visual_slide .itm .slg p {
+    color: #fff;
+    text-align: center;
+    font-size: 17px;
+    font-weight: 300;
+    line-height: 24px;
+
+    margin-bottom: 40px;
+}
+
+.main_visual .main_visual_slide .itm .slg .btn {
+    border: 2px solid #fff;
+    color: #fff;
+}
+
+.main_visual .main_visual_slide .itm .slg .btn::after {
+    background: url(../images/arrow-up-right-w.svg) no-repeat center center/16px;
+}
+
+.test {
+    height: 100vh;
+}
